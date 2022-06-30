@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifer"></script>
+    <title>Clasificador de imagenes</title>
+  </head>
+  <body>
+    <img
+      id="img"
+      crossorigin
+      src="https://res.cloudinary.com/vicflores11/image/upload/v1656029287/Test/adorable-raza-perro-husky-siberiano-bosque-soleado-invierno_112397-335_akj796.jpg"
+      width="227"
+      height="300"
+    />
+
+    <button onclick="cambiarImagen()">Cambiar imagen</button>
+
+    <div id="descripcion_imagen"></div>
+
+    <video
+      autoplay
+      playsinline
+      muted
+      id="webcam"
+      width="224"
+      height="224"
+    ></video>
+
+    <button id="clase-a" onclick="addExample(1)">Vic</button>
+    <button id="clase-a" onclick="addExample(2)">Botella de agua</button>
+    <button id="clase-a" onclick="addExample(3)">Alcohol gel</button>
+
+    <div id="console"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
